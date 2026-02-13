@@ -3,5 +3,6 @@ djangorestframework==3.14.0
 django-cors-headers==4.0.0
 mysql-connector-python==8.0.33
 PyMySQL==1.1.1
+cryptography==44.0.1
 python-dotenv==1.0.0
 gunicorn==20.1.0
