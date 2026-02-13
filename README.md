@@ -21,6 +21,11 @@ I built this project to practice full stack development by creating a simple tas
 - Frontend: https://task77manager.netlify.app
 - Backend API: https://task-manager-1-tazf.onrender.com/api/tasks/
 
+## Author
+
+- Name: Aswathi
+- GitHub: https://github.com/Aswathi-m7
+
 ## Run Locally
 
 ### Backend
@@ -41,6 +46,30 @@ cd Frontend
 npm install
 npm run dev
 ```
+
+## Environment Variables
+
+### Backend (`Backend/.env`)
+
+- `SECRET_KEY`
+- `DEBUG`
+- `DB_NAME`
+- `DB_USER`
+- `DB_PASSWORD`
+- `DB_HOST`
+- `DB_PORT`
+- `ALLOWED_HOSTS`
+- `CORS_ALLOWED_ORIGINS`
+
+### Frontend (`Frontend/.env`)
+
+- `VITE_API_BASE_URL`
+
+## Deployment
+
+- Frontend deployed on Netlify
+- Backend deployed on Render
+- MySQL hosted on Aiven
 
 ## Notes
 
