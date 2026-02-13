@@ -10,6 +10,11 @@
 ![React](https://img.shields.io/badge/react-18.2-61dafb.svg)
 ![MySQL](https://img.shields.io/badge/mysql-8.0-00758f.svg)
 
+## Live Demo
+
+- Frontend: https://task77manager.netlify.app
+- Backend API: https://task-manager-1-tazf.onrender.com/api/tasks/
+
 ## 📋 Project Overview
 
 A complete Full Stack CRUD (Create, Read, Update, Delete) Application demonstrating modern web development practices. This application provides a task management system where users can create, view, update, and delete tasks with various features like priority levels, status tracking, and task statistics.
@@ -524,3 +529,4 @@ Full Stack CRUD Application - Task Manager
 **Happy Task Managing! 🎉**
 
 For questions or issues, please create an issue in the repository or contact the development team.
+
