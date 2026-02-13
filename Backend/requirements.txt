@@ -7,3 +7,5 @@ cryptography==44.0.1
 python-dotenv==1.0.0
 gunicorn==23.0.0
 setuptools==82.0.0
+whitenoise==6.9.0
+

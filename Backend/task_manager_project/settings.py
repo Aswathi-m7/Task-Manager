@@ -23,7 +23,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-your-secret-key-change-in-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
+ALLOWED_HOSTS = [host.strip() for host in os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',') if host.strip()]
 
 
 # Application definition
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -115,7 +116,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 
@@ -124,10 +125,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CORS Configuration
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
+    origin.strip() for origin in os.getenv(
+        'CORS_ALLOWED_ORIGINS',
+        'http://localhost:3000,http://127.0.0.1:3000,http://localhost:5173,http://127.0.0.1:5173'
+    ).split(',') if origin.strip()
 ]
 
 CORS_ALLOW_CREDENTIALS = True
